@@ -612,7 +612,6 @@ enum bfqq_state_flags {
 	BFQ_BFQQ_FLAG_fifo_expire,	/* FIFO checked in this slice */
 	BFQ_BFQQ_FLAG_has_short_ttime,	/* queue has a short think time */
 	BFQ_BFQQ_FLAG_sync,		/* synchronous queue */
-	BFQ_BFQQ_FLAG_budget_new,	/* no completion with this budget */
 	BFQ_BFQQ_FLAG_IO_bound,		/*
 					 * bfqq has timed-out at least once
 					 * having consumed at most 2/10 of
@@ -652,7 +651,6 @@ BFQ_BFQQ_FNS(must_alloc);
 BFQ_BFQQ_FNS(fifo_expire);
 BFQ_BFQQ_FNS(has_short_ttime);
 BFQ_BFQQ_FNS(sync);
-BFQ_BFQQ_FNS(budget_new);
 BFQ_BFQQ_FNS(IO_bound);
 BFQ_BFQQ_FNS(in_large_burst);
 BFQ_BFQQ_FNS(coop);
@@ -944,3 +942,4 @@ static void bfq_put_async_queues(struct bfq_data *bfqd, struct bfq_group *bfqg);
 static void bfq_exit_bfqq(struct bfq_data *bfqd, struct bfq_queue *bfqq);
 
 #endif /* _BFQ_H */
+
