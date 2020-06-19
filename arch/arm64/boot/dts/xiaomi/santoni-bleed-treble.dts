@@ -6063,23 +6063,6 @@
 
 		thermal-zones {
 
-			pa-therm1-adc {
-				polling-delay-passive = <0x0>;
-				polling-delay = <0x0>;
-				thermal-sensors = <0x89 0x11>;
-				thermal-governor = "user_space";
-				wake-capable-sensor;
-
-				trips {
-
-					active-config0 {
-						temperature = <0xfde8>;
-						hysteresis = <0x3e8>;
-						type = "passive";
-					};
-				};
-			};
-
 			xo-therm-adc {
 				polling-delay-passive = <0x0>;
 				polling-delay = <0x0>;
